@@ -1,11 +1,10 @@
 from utlis import *
 
-def extract_board(pathImage):
+def extract_board(img):
     heightImg = 450
     widthImg = 450
 
     #### 1. PREPARE THE IMAGE
-    img = cv2.imread(pathImage)
     img = cv2.resize(img, (widthImg, heightImg))  # RESIZE IMAGE TO MAKE IT A SQUARE IMAGE
     imgThreshold = preProcess(img)
 
