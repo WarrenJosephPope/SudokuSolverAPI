@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import pytesseract
 
-# pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+# pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 
 #### 1 - Preprocessing Image
 def preProcess(img):
