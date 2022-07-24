@@ -90,7 +90,7 @@ class Solve:
 def index():
     if request.method == 'POST':
         if request.files:
-            image = cv2.imdecode(np.fromstring(request.files['myfile'].read(), np.uint8), cv2.IMREAD_UNCHANGED)
+            image = cv2.imdecode(np.frombuffer(request.files['myfile'].read(), np.uint8), cv2.IMREAD_UNCHANGED)
             return {"result": extract_board(image)}
         else:
             lst = list(request.data.decode('utf-8').replace('[', '').replace(']', '').replace('"', '').replace(',',''))
